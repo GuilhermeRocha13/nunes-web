@@ -46,7 +46,6 @@ public class ProdutosController : ControllerBase
         return CreatedAtAction(nameof(GetProduto), new { id = produto.Id }, produto);
     }
 
-    // PUT: api/Produtos/5
     [HttpPut("{id}")]
     public async Task<IActionResult> PutProduto(int id, Produto produto)
     {
