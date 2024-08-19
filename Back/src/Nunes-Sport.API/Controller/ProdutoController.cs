@@ -24,7 +24,6 @@ public class ProdutosController : ControllerBase
         return await _context.Produtos.ToListAsync();
     }
 
-    // GET: api/Produtos/5
     [HttpGet("{id}")]
     public async Task<ActionResult<Produto>> GetProduto(int id)
     {
@@ -38,7 +37,6 @@ public class ProdutosController : ControllerBase
         return produto;
     }
 
-    // POST: api/Produtos
     [HttpPost]
     public async Task<ActionResult<Produto>> PostProduto(Produto produto)
     {
