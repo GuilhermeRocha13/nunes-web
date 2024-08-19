@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Nunes-Sport.API.props" />
+</Project>
