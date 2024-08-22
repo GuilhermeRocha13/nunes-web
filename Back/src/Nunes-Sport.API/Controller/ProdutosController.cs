@@ -17,7 +17,6 @@ public class ProdutosController : ControllerBase
         _context = context;
     }
 
-    // GET: api/Produtos
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Produto>>> GetProdutos()
     {

@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:5196/api/Produtos'; // Altere para o URL da sua API
+const apiUrl = 'http://localhost:5196/api/Produtos';
 
 async function getProdutos() {
     const response = await fetch(apiUrl);
