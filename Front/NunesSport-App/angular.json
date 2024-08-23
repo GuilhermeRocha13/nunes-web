@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Nunes-Sport-App": {
+    "NunesSport-App": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Nunes-Sport-App:build:production"
+              "buildTarget": "NunesSport-App:build:production"
             },
             "development": {
-              "buildTarget": "Nunes-Sport-App:build:development"
+              "buildTarget": "NunesSport-App:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Nunes-Sport-App:build"
+            "buildTarget": "NunesSport-App:build"
           }
         },
         "test": {
@@ -104,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "2a070fa6-6a9d-4515-802a-6114522d1b33"
+    "analytics": "2f847c1e-0a21-465c-bb6b-b2aa53a5665a"
   }
 }
