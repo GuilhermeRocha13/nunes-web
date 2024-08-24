@@ -9,8 +9,8 @@ namespace Nunes_Sport.API.Models
     {
     public int Id { get; set; }
     public string Nome { get; set; }
-    public string CodFabricante { get; set; }
-    public string CodCategoria { get; set; }
+    public int CodFabricante { get; set; }
+    public int CodCategoria { get; set; }
     public string Descricao { get; set; }
     public decimal Preco { get; set; }
     }

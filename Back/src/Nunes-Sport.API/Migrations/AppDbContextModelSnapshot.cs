@@ -41,13 +41,11 @@ namespace Nunes_Sport.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("CodCategoria")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("CodCategoria")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("CodFabricante")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("CodFabricante")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
