@@ -393,3 +393,4 @@ C:\Users\guilherme.rocha\Documents\GitHub\nunes-web\Back\src\Nunes-Sport.API\obj
 C:\Users\guilherme.rocha\Documents\GitHub\nunes-web\Back\src\Nunes-Sport.API\obj\Debug\net8.0\Nunes-Sport.API.pdb
 C:\Users\guilherme.rocha\Documents\GitHub\nunes-web\Back\src\Nunes-Sport.API\obj\Debug\net8.0\Nunes-Sport.API.genruntimeconfig.cache
 C:\Users\guilherme.rocha\Documents\GitHub\nunes-web\Back\src\Nunes-Sport.API\obj\Debug\net8.0\ref\Nunes-Sport.API.dll
+C:\Users\guilherme.rocha\Documents\GitHub\nunes-web\Back\src\Nunes-Sport.API\bin\Debug\net8.0\Nunes-Sport.API.staticwebassets.runtime.json

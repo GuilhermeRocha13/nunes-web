@@ -52,26 +52,25 @@ export class ProdutosComponent implements OnInit {
   }
 
   public createProduct(form: any): void {
-    if (form.valid) {
-      const novoProduto = {
-        nome: form.value.nome,
-        descricao: form.value.descricao,
-        preco: form.value.preco,
-        codcategoria: form.value.codcategoria,
-        codfabricante: form.value.codfabricante,
-        imagemURL: form.value.imagemURL  // Adiciona o campo imagemURL aqui
-      };
-  
-      this.http.post('http://localhost:5196/api/Produtos', novoProduto)
-        .subscribe(response => {
-          console.log('Produto criado com sucesso!', response);
-          this.modalService.dismissAll();  // Fecha o modal
-          form.reset();  // Reseta o formulário
-          this.getProdutos();  // Atualiza a lista de produtos
-        }, error => {
-          console.error('Erro ao criar o produto:', error);
-        });
+  if (form.valid) {
+    const novoProduto = {
+      nome: form.value.nome,
+      descricao: form.value.descricao,
+      preco: form.value.preco,
+      codcategoria: form.value.codcategoria,
+      codfabricante: form.value.codfabricante,
+      imagemURL: form.value.imagemURL  // Adiciona o campo imagemURL aqui
+    };
+
+    this.http.post('http://localhost:5196/api/Produtos', novoProduto)
+      .subscribe(response => {
+        console.log('Produto criado com sucesso!', response);
+        this.modalService.dismissAll();  // Fecha o modal
+        form.reset();  // Reseta o formulário
+        this.getProdutos();  // Atualiza a lista de produtos
+      }, error => {
+        console.error('Erro ao criar o produto:', error);
+      });
     }
   }
-  
-}  
+}
