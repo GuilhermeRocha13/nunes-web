@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Http; // Adicione esta importação para IFormFile
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nunes_Sport.API.Data;
 using Nunes_Sport.API.Models;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,6 +13,7 @@ using System.Threading.Tasks;
 public class ProdutosController : ControllerBase
 {
     private readonly AppDbContext _context;
+    private readonly string _imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
 
     public ProdutosController(AppDbContext context)
     {
@@ -87,6 +90,31 @@ public class ProdutosController : ControllerBase
         await _context.SaveChangesAsync();
 
         return NoContent();
+    }
+
+    [HttpPost("upload")]
+    public async Task<IActionResult> UploadImage(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+        {
+            return BadRequest("No file uploaded.");
+        }
+
+        if (!Directory.Exists(_imagePath))
+        {
+            Directory.CreateDirectory(_imagePath);
+        }
+
+        var fileName = Path.GetFileName(file.FileName);
+        var filePath = Path.Combine(_imagePath, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        // Retorna o caminho relativo para a imagem
+        return Ok(new { filePath = $"/images/{fileName}" });
     }
 
     private bool ProdutoExists(int id)
