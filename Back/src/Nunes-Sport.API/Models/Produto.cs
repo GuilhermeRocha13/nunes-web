@@ -13,5 +13,6 @@ namespace Nunes_Sport.API.Models
     public int CodCategoria { get; set; }
     public string Descricao { get; set; }
     public decimal Preco { get; set; }
+    public string ImagemURL { get; set; }
     }
 }
