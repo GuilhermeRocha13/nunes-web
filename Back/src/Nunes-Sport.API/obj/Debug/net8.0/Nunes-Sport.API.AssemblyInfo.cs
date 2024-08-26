@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nunes-Sport.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df94d193e8348c1365175d43b4810d0bdafdeef5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+665c8db5bed97c220947fa0934b05e4a4ec3c6d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nunes-Sport.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nunes-Sport.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
