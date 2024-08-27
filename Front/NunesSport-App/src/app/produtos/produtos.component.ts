@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 export class ProdutosComponent implements OnInit {
 
   public produtos: any;
+  public selectedFile: File | null = null;
 
   constructor(private http: HttpClient, private modalService: NgbModal) { }
 
@@ -40,7 +41,7 @@ export class ProdutosComponent implements OnInit {
       this.http.delete(`http://localhost:5196/api/Produtos/${id}`).subscribe(
         () => {
           console.log('Produto deletado com sucesso!');
-          this.getProdutos();  // Atualiza a lista de produtos
+          this.getProdutos();
         },
         error => console.error('Erro ao deletar o produto:', error)
       );
@@ -51,26 +52,36 @@ export class ProdutosComponent implements OnInit {
     this.modalService.open('#createModal');
   }
 
-  public createProduct(form: any): void {
-  if (form.valid) {
-    const novoProduto = {
-      nome: form.value.nome,
-      descricao: form.value.descricao,
-      preco: form.value.preco,
-      codcategoria: form.value.codcategoria,
-      codfabricante: form.value.codfabricante,
-      imagemURL: form.value.imagemURL  // Adiciona o campo imagemURL aqui
-    };
-
-    this.http.post('http://localhost:5196/api/Produtos', novoProduto)
-      .subscribe(response => {
-        console.log('Produto criado com sucesso!', response);
-        this.modalService.dismissAll();  // Fecha o modal
-        form.reset();  // Reseta o formulário
-        this.getProdutos();  // Atualiza a lista de produtos
-      }, error => {
-        console.error('Erro ao criar o produto:', error);
-      });
+  public onFileChange(event: any): void {
+    if (event.target.files && event.target.files.length > 0) {
+      this.selectedFile = event.target.files[0];
     }
   }
+
+  public createProduct(form: any): void {
+    if (form.valid) {
+      const formData = new FormData();
+      formData.append('nome', form.value.nome);
+      formData.append('descricao', form.value.descricao);
+      formData.append('preco', form.value.preco);
+      formData.append('codcategoria', form.value.codcategoria);
+      formData.append('codfabricante', form.value.codfabricante);
+  
+      if (this.selectedFile) {
+        formData.append('imagem', this.selectedFile, this.selectedFile.name);
+      } else {
+        console.error('Nenhum arquivo foi selecionado para o campo de imagem.');
+      }
+  
+      this.http.post('http://localhost:5196/api/Produtos', formData)
+        .subscribe(response => {
+          console.log('Produto criado com sucesso!', response);
+          this.modalService.dismissAll();
+          form.reset();
+          this.getProdutos();
+        }, error => {
+          console.error('Erro ao criar o produto:', error);
+        });
+    }
+  }  
 }

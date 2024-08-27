@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nunes_Sport.API.Data;
 using Nunes_Sport.API.Models;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -37,8 +39,17 @@ public class ProdutosController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Produto>> PostProduto(Produto produto)
+    public async Task<ActionResult<Produto>> PostProduto([FromForm] Produto produto, [FromForm] IFormFile imagem)
     {
+        if (imagem != null && imagem.Length > 0)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                await imagem.CopyToAsync(memoryStream);
+                produto.Imagem = memoryStream.ToArray();
+            }
+        }
+
         _context.Produtos.Add(produto);
         await _context.SaveChangesAsync();
 
@@ -46,11 +57,20 @@ public class ProdutosController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutProduto(int id, Produto produto)
+    public async Task<IActionResult> PutProduto(int id, [FromForm] Produto produto, [FromForm] IFormFile imagem)
     {
         if (id != produto.Id)
         {
             return BadRequest();
+        }
+
+        if (imagem != null && imagem.Length > 0)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                await imagem.CopyToAsync(memoryStream);
+                produto.Imagem = memoryStream.ToArray();
+            }
         }
 
         _context.Entry(produto).State = EntityState.Modified;

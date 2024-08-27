@@ -75,9 +75,9 @@
               <input type="text" class="form-control" id="codfabricante" name="codfabricante" ngModel required>
             </div>
             <div class="mb-3">
-              <label for="imagemURL" class="form-label">Caminho da Imagem</label>
-              <input type="text" class="form-control" id="imagemURL" name="imagemURL" ngModel required>
-            </div>
+              <label for="imagem" class="form-label">Imagem</label>
+              <input type="file" class="form-control" id="imagem" name="imagem" (change)="onFileChange($event)" accept="image/*">
+            </div>          
             <button type="submit" class="btn btn-success">Criar</button>
           </form>
         </div>
