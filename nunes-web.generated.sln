@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{6207D9E6-E43A-46C7-BAFE-CFDD19F75612}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{C7E8AF68-5129-4E54-9FA7-E3557176DB96}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{61EE6307-6D62-4657-8B1D-887753FC37BD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9AF61710-7EF3-4F90-BD25-323C5B725C8F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nunes-Sport.API", "Back\src\Nunes-Sport.API\Nunes-Sport.API.csproj", "{0FF1B6D6-B187-4A2F-A850-641B4B0D0749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nunes-Sport.API", "Back\src\Nunes-Sport.API\Nunes-Sport.API.csproj", "{4733A527-4C16-475C-BB8B-679314550276}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +15,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0FF1B6D6-B187-4A2F-A850-641B4B0D0749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FF1B6D6-B187-4A2F-A850-641B4B0D0749}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FF1B6D6-B187-4A2F-A850-641B4B0D0749}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FF1B6D6-B187-4A2F-A850-641B4B0D0749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4733A527-4C16-475C-BB8B-679314550276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4733A527-4C16-475C-BB8B-679314550276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4733A527-4C16-475C-BB8B-679314550276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4733A527-4C16-475C-BB8B-679314550276}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{61EE6307-6D62-4657-8B1D-887753FC37BD} = {6207D9E6-E43A-46C7-BAFE-CFDD19F75612}
-		{0FF1B6D6-B187-4A2F-A850-641B4B0D0749} = {61EE6307-6D62-4657-8B1D-887753FC37BD}
+		{9AF61710-7EF3-4F90-BD25-323C5B725C8F} = {C7E8AF68-5129-4E54-9FA7-E3557176DB96}
+		{4733A527-4C16-475C-BB8B-679314550276} = {9AF61710-7EF3-4F90-BD25-323C5B725C8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {591353EB-B487-49A6-8084-B7EA0117F8A9}
