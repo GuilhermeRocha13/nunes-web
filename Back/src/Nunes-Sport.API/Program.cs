@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
 using Nunes_Sport.API.Data;
-using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +23,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    //app.UseStaticFiles();
+    app.UseStaticFiles();
 }
 
 app.UseHttpsRedirection();
@@ -38,10 +36,5 @@ app.UseCors(cors => cors.AllowAnyHeader()
                                     .AllowAnyMethod()
                                     .AllowAnyOrigin()
             );
-
-// app.UseStaticFiles(new StaticFileOptions(){
-//     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Resources")),
-//     RequestPath = new PathString("/Resources")
-// });
 
 app.Run();
