@@ -15,6 +15,7 @@ export class ProdutosComponent implements OnInit {
 
   public produtos: any;
   public formInvalido: any;
+  public selectedProduct: any;
 
   constructor(private http: HttpClient, private modalService: NgbModal) { }
 
@@ -33,7 +34,23 @@ export class ProdutosComponent implements OnInit {
   }
 
   public editProduct(produto: any): void {
-   
+    this.selectedProduct = { ...produto };
+    this.modalService.open('#editModal');
+  }
+
+  public updateProduct(form: any): void {
+    if (form.valid) {
+      this.http.put(`http://localhost:5196/api/Produtos/${this.selectedProduct.id}`, this.selectedProduct)
+        .subscribe(response => {
+          console.log('Produto atualizado com sucesso!', response);
+          this.modalService.dismissAll();
+          this.getProdutos();
+        }, error => {
+          console.error('Erro ao atualizar o produto:', error);
+        });
+    } else {
+      this.formInvalido = true;
+    }
   }
 
   public deleteProduct(id: number): void {
