@@ -1,6 +1,6 @@
-# Nunes Sport
+# Nunes Sports
 
-**Nunes Sport** é um sistema CRUD básico projetado para gerenciar produtos de forma eficiente. Este projeto utiliza uma arquitetura separada para o front-end e back-end, com um banco de dados SQLite para armazenamento.
+**Nunes Sports** é um sistema CRUD básico projetado para gerenciar produtos de forma eficiente. Este projeto utiliza uma arquitetura separada para o front-end e back-end, com um banco de dados SQLite para armazenamento.
 
 ## Tecnologias
 
