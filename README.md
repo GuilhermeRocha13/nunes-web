@@ -12,7 +12,6 @@
 
 - **CRUD de Produtos**: Adicionar, editar, visualizar e deletar produtos.
 - **Interface de Usuário**: Interface web responsiva para gerenciamento de produtos.
-- **Filtragem e Pesquisa**: Pesquisa de produtos por nome e descrição.
 
 ## Estrutura do Projeto
 
