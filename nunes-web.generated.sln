@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{654E36A6-D842-4D38-9E04-CBD894484376}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{D436B0EF-BDE4-49FD-84D8-E2FB64BE989E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{99302C4A-E1F1-48CA-A42A-CDFABF43CF3F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A83C9BE-28FA-4819-8E9E-0CBB6D5FE481}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nunes-Sport.API", "Back\src\Nunes-Sport.API\Nunes-Sport.API.csproj", "{7FB0B703-04B5-4142-9F9B-002F1E7A112F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nunes-Sport.API", "Back\src\Nunes-Sport.API\Nunes-Sport.API.csproj", "{68980B05-D601-4CAD-9650-BF5BBCCD7046}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +15,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7FB0B703-04B5-4142-9F9B-002F1E7A112F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FB0B703-04B5-4142-9F9B-002F1E7A112F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FB0B703-04B5-4142-9F9B-002F1E7A112F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FB0B703-04B5-4142-9F9B-002F1E7A112F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68980B05-D601-4CAD-9650-BF5BBCCD7046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68980B05-D601-4CAD-9650-BF5BBCCD7046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68980B05-D601-4CAD-9650-BF5BBCCD7046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68980B05-D601-4CAD-9650-BF5BBCCD7046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{99302C4A-E1F1-48CA-A42A-CDFABF43CF3F} = {654E36A6-D842-4D38-9E04-CBD894484376}
-		{7FB0B703-04B5-4142-9F9B-002F1E7A112F} = {99302C4A-E1F1-48CA-A42A-CDFABF43CF3F}
+		{8A83C9BE-28FA-4819-8E9E-0CBB6D5FE481} = {D436B0EF-BDE4-49FD-84D8-E2FB64BE989E}
+		{68980B05-D601-4CAD-9650-BF5BBCCD7046} = {8A83C9BE-28FA-4819-8E9E-0CBB6D5FE481}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {591353EB-B487-49A6-8084-B7EA0117F8A9}

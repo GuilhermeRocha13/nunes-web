@@ -50,7 +50,6 @@
           <td>
               <ng-container *ngIf="selectedProduct?.id === produto.id; else displayAcoes">
                   <button class="btn btn-success btn-sm" (click)="updateProduct(produto)">Salvar</button>
-                  <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancelar</button>
               </ng-container>
               <ng-template #displayAcoes>
                   <button class="btn btn-warning btn-sm" (click)="editProduct(produto)">Editar</button>
@@ -60,14 +59,9 @@
       </tr>
   </tbody>
 </table>
-
-
-<!-- Botão para abrir o modal -->
 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
   Criar Produto
 </button>
-
-<!-- Modal de criação de produto -->
 <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -80,7 +74,6 @@
       </div>
       <div class="modal-body">
         <form #createForm="ngForm" (ngSubmit)="createProduct(createForm)">
-          <!-- Campos do formulário -->
           <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
             <input type="text" class="form-control" id="nome" name="nome" ngModel required>
