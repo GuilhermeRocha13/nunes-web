@@ -34,19 +34,19 @@ export class ProdutosComponent implements OnInit {
   }
 
   public editProduct(produto: any): void {
-    this.selectedProduct = produto; // Defina o produto selecionado para edição
+    this.selectedProduct = produto;
   }
   
   public cancelEdit(): void {
-    this.selectedProduct = null; // Limpe a seleção para cancelar a edição
+    this.selectedProduct = null;
   }
   
   public updateProduct(produto: any): void {
     this.http.put(`http://localhost:5196/api/Produtos/${produto.id}`, produto)
       .subscribe(response => {
         console.log('Produto atualizado com sucesso!', response);
-        this.getProdutos(); // Atualize a lista de produtos após a edição
-        this.selectedProduct = null; // Limpe a seleção após a atualização
+        this.getProdutos();
+        this.selectedProduct = null;
       }, error => {
         console.error('Erro ao atualizar o produto:', error);
       });
