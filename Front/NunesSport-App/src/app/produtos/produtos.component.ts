@@ -34,25 +34,24 @@ export class ProdutosComponent implements OnInit {
   }
 
   public editProduct(produto: any): void {
-    this.selectedProduct = { ...produto };
-    this.modalService.open('#editModal');
+    this.selectedProduct = produto; // Defina o produto selecionado para edição
   }
-
-  public updateProduct(form: any): void {
-    if (form.valid) {
-      this.http.put(`http://localhost:5196/api/Produtos/${this.selectedProduct.id}`, this.selectedProduct)
-        .subscribe(response => {
-          console.log('Produto atualizado com sucesso!', response);
-          this.modalService.dismissAll();
-          this.getProdutos();
-        }, error => {
-          console.error('Erro ao atualizar o produto:', error);
-        });
-    } else {
-      this.formInvalido = true;
-    }
+  
+  public cancelEdit(): void {
+    this.selectedProduct = null; // Limpe a seleção para cancelar a edição
   }
-
+  
+  public updateProduct(produto: any): void {
+    this.http.put(`http://localhost:5196/api/Produtos/${produto.id}`, produto)
+      .subscribe(response => {
+        console.log('Produto atualizado com sucesso!', response);
+        this.getProdutos(); // Atualize a lista de produtos após a edição
+        this.selectedProduct = null; // Limpe a seleção após a atualização
+      }, error => {
+        console.error('Erro ao atualizar o produto:', error);
+      });
+  }
+  
   public deleteProduct(id: number): void {
     if (confirm("Tem certeza que deseja excluir este produto?")) {
       this.http.delete(`http://localhost:5196/api/Produtos/${id}`).subscribe(

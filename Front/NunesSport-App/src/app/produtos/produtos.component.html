@@ -1,14 +1,3 @@
-<form action="" class="form-inline justify-content-center my-4">
-  <div class="input-group">
-      <input type="text" class="form-control" placeholder="Buscar produtos..." style="width: 300px; border-radius: 20px 0 0 20px;">
-      <div class="input-group-append">
-          <button class="btn btn-outline-success" style="border-radius: 0 20px 20px 0;">
-              <i class="fas fa-search"></i>
-          </button>
-      </div>
-  </div>
-</form>
-
 <table class="table table-hover table-bordered text-center">
   <thead class="thead-dark">
       <tr>
@@ -22,24 +11,56 @@
           <th>Ações</th>
       </tr>
   </thead>
-  <tbody *ngFor="let produto of produtos">
-      <tr>
+  <tbody>
+      <tr *ngFor="let produto of produtos">
           <td>
               <img src="/assets/{{produto.imagemURL}}" alt="" width="100" height="100" style="object-fit: cover; border-radius: 10px;">
           </td>
           <td>{{produto.id}}</td>
-          <td>{{produto.nome}}</td>
-          <td>{{produto.descricao}}</td>
-          <td>{{produto.preco | currency:'BRL':'symbol':'1.2-2'}}</td>
-          <td>{{produto.codcategoria}}</td>
-          <td>{{produto.codfabricante}}</td>
           <td>
-              <button class="btn btn-warning btn-sm" (click)="editProduct(produto)">Editar</button>
-              <button class="btn btn-danger btn-sm" (click)="deleteProduct(produto.id)">Deletar<i class="fas fa-trash"></i></button>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayNome">
+                  <input type="text" [(ngModel)]="produto.nome" class="form-control" />
+              </ng-container>
+              <ng-template #displayNome>{{produto.nome}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayDescricao">
+                  <input type="text" [(ngModel)]="produto.descricao" class="form-control" />
+              </ng-container>
+              <ng-template #displayDescricao>{{produto.descricao}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayPreco">
+                  <input type="number" [(ngModel)]="produto.preco" class="form-control" />
+              </ng-container>
+              <ng-template #displayPreco>{{produto.preco | currency:'BRL':'symbol':'1.2-2'}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displaycategoria">
+                  <input type="text" [(ngModel)]="produto.categoria" class="form-control" />
+              </ng-container>
+              <ng-template #displaycategoria>{{produto.categoria}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayfabricante">
+                  <input type="text" [(ngModel)]="produto.fabricante" class="form-control" />
+              </ng-container>
+              <ng-template #displayfabricante>{{produto.fabricante}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayAcoes">
+                  <button class="btn btn-success btn-sm" (click)="updateProduct(produto)">Salvar</button>
+                  <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancelar</button>
+              </ng-container>
+              <ng-template #displayAcoes>
+                  <button class="btn btn-warning btn-sm" (click)="editProduct(produto)">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteProduct(produto.id)">Deletar<i class="fas fa-trash"></i></button>
+              </ng-template>
           </td>
       </tr>
   </tbody>
 </table>
+
 
 <!-- Botão para abrir o modal -->
 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
@@ -73,12 +94,12 @@
             <input type="number" class="form-control" id="preco" name="preco" ngModel required>
           </div>
           <div class="mb-3">
-            <label for="codcategoria" class="form-label">Categoria</label>
-            <input type="text" class="form-control" id="codcategoria" name="codcategoria" ngModel>
+            <label for="categoria" class="form-label">Categoria</label>
+            <input type="text" class="form-control" id="categoria" name="categoria" ngModel>
           </div>
           <div class="mb-3">
-            <label for="codfabricante" class="form-label">Fabricante</label>
-            <input type="text" class="form-control" id="codfabricante" name="codfabricante" ngModel>
+            <label for="fabricante" class="form-label">Fabricante</label>
+            <input type="text" class="form-control" id="fabricante" name="fabricante" ngModel>
           </div>
           <div class="mb-3">
             <label for="imagemURL" class="form-label">Catálogo de imagens</label>
@@ -98,6 +119,5 @@
     </div>
   </div>
 </div>
-
 
 
