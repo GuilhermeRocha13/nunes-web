@@ -18,12 +18,12 @@
 
 ### Back-end
 
-- **Localização**: `backend/`
+- **Localização**: `Back/`
 - **Descrição**: Implementado em .NET Core, expõe uma API RESTful para operações CRUD.
 
 ### Front-end
 
-- **Localização**: `frontend/`
+- **Localização**: `Front`
 - **Descrição**: Desenvolvido com Angular, consome a API fornecida pelo back-end para manipulação de dados.
 
 ### Banco de Dados
@@ -37,21 +37,18 @@
 
 - [.NET Core SDK](https://dotnet.microsoft.com/download) (para o back-end)
 - [Node.js](https://nodejs.org/) (para o front-end)
-- [SQLite](https://www.sqlite.org/download.html) (para o banco de dados)
 
 ### Configuração do Back-end
 
 1. Navegue até a pasta `backend`:
    ```bash
-   cd backend
-   dotnet restore
-   dotnet ef database update
+   cd Back/src/Nunes-Sport.API
    dotnet run
 
 ### Configuração do Front-end
 Navegue até a pasta `frontend`:
    ```bash
-   cd frontend
+   cd Front/NunesSport-App/
    npm install
    ng serve
 
