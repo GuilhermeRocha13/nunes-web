@@ -16,39 +16,23 @@ namespace Nunes_Sport.API.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("Nunes_Sport.API.Models.Fabricante", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CNPJ")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("RazaoSocial")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Fabricantes");
-                });
-
             modelBuilder.Entity("Nunes_Sport.API.Models.Produto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CodCategoria")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CodFabricante")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Categoria")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Fabricante")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImagemURL")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Nome")
