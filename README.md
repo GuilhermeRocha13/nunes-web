@@ -22,7 +22,7 @@
 
 ### Front-end
 
-- **Localização**: `Front`
+- **Localização**: `Front/`
 - **Descrição**: Desenvolvido com Angular, consome a API fornecida pelo back-end para manipulação de dados.
 
 ### Banco de Dados
@@ -41,7 +41,7 @@
 
 1. Navegue até a pasta `backend`:
    ```bash
-   cd Back/src/Nunes-Sport.API
+   cd Back/src/Nunes-Sport.API/
    dotnet run
 
 ### Configuração do Front-end
