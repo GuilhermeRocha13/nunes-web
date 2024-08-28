@@ -41,8 +41,8 @@
   </tbody>
 </table>
 
-<!-- Botão para abrir o modal -->
 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
+<<<<<<< HEAD
   Criar Produto
 </button>
 
@@ -94,6 +94,47 @@
           </div>
           <button type="submit" class="btn btn-success">Criar</button>
         </form>
+=======
+    Criar Produto
+  </button>
+
+  <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createModalLabel">Criar Novo Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form #createForm="ngForm" (ngSubmit)="createProduct(createForm)">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" name="nome" ngModel required>
+            </div>
+            <div class="mb-3">
+              <label for="descricao" class="form-label">Descrição</label>
+              <input type="text" class="form-control" id="descricao" name="descricao" ngModel required>
+            </div>
+            <div class="mb-3">
+              <label for="preco" class="form-label">Preço</label>
+              <input type="number" class="form-control" id="preco" name="preco" ngModel required>
+            </div>
+            <div class="mb-3">
+              <label for="codcategoria" class="form-label">Categoria</label>
+              <input type="text" class="form-control" id="codcategoria" name="codcategoria" ngModel required>
+            </div>
+            <div class="mb-3">
+              <label for="codfabricante" class="form-label">Fabricante</label>
+              <input type="text" class="form-control" id="codfabricante" name="codfabricante" ngModel required>
+            </div>
+            <div class="mb-3">
+              <label for="imagemURL" class="form-label">Caminho da Imagem</label>
+              <input type="text" class="form-control" id="imagemURL" name="imagemURL" ngModel required>
+            </div>
+            <button type="submit" class="btn btn-success">Criar</button>
+          </form>
+        </div>
+>>>>>>> 7e9c613fad3335858a1bee09a5be3ebf41c14971
       </div>
     </div>
   </div>
