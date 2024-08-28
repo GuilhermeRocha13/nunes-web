@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+klOtozfv7Z2m+/OSUAnWEZzT1zAqpkvQ77GR87dU+Y=",
+  "Hash": "8fiK9sXnhbtMUiNIgMZj+60vpXS9YUl6ILYbN+8ZFOE=",
   "Source": "Nunes-Sport.API",
   "BasePath": "_content/Nunes-Sport.API",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "Nunes-Sport.API\\wwwroot",
+      "Name": "Nunes-Sport.API/wwwroot",
       "Source": "Nunes-Sport.API",
-      "ContentRoot": "C:\\Users\\guilherme.rocha\\Documents\\GitHub\\nunes-web\\Back\\src\\Nunes-Sport.API\\wwwroot\\",
+      "ContentRoot": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/",
       "BasePath": "_content/Nunes-Sport.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\guilherme.rocha\\Documents\\GitHub\\nunes-web\\Back\\src\\Nunes-Sport.API\\wwwroot\\images\\bandagem.jpg",
+      "Identity": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/images/bandagem.jpg",
       "SourceId": "Nunes-Sport.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\guilherme.rocha\\Documents\\GitHub\\nunes-web\\Back\\src\\Nunes-Sport.API\\wwwroot\\",
+      "ContentRoot": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/",
       "BasePath": "_content/Nunes-Sport.API",
       "RelativePath": "images/bandagem.jpg",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\bandagem.jpg"
+      "OriginalItemSpec": "wwwroot/images/bandagem.jpg"
     },
     {
-      "Identity": "C:\\Users\\guilherme.rocha\\Documents\\GitHub\\nunes-web\\Back\\src\\Nunes-Sport.API\\wwwroot\\images\\luva.jpg",
+      "Identity": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/images/luva.jpg",
       "SourceId": "Nunes-Sport.API",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\guilherme.rocha\\Documents\\GitHub\\nunes-web\\Back\\src\\Nunes-Sport.API\\wwwroot\\",
+      "ContentRoot": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/",
       "BasePath": "_content/Nunes-Sport.API",
       "RelativePath": "images/luva.jpg",
       "AssetKind": "All",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\luva.jpg"
+      "OriginalItemSpec": "wwwroot/images/luva.jpg"
     }
   ]
 }

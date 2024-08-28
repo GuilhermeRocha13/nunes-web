@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\guilherme.rocha\\Documents\\GitHub\\nunes-web\\Back\\src\\Nunes-Sport.API\\wwwroot\\images\\bandagem.jpg",
-      "PackagePath": "staticwebassets\\images\\bandagem.jpg"
+      "Id": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/images/bandagem.jpg",
+      "PackagePath": "staticwebassets/images/bandagem.jpg"
     },
     {
-      "Id": "C:\\Users\\guilherme.rocha\\Documents\\GitHub\\nunes-web\\Back\\src\\Nunes-Sport.API\\wwwroot\\images\\luva.jpg",
-      "PackagePath": "staticwebassets\\images\\luva.jpg"
+      "Id": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/images/luva.jpg",
+      "PackagePath": "staticwebassets/images/luva.jpg"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Nunes-Sport.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Nunes-Sport.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Nunes-Sport.API.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Nunes-Sport.API.props",
       "PackagePath": "build\\Nunes-Sport.API.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Nunes-Sport.API.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Nunes-Sport.API.props",
       "PackagePath": "buildMultiTargeting\\Nunes-Sport.API.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Nunes-Sport.API.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Nunes-Sport.API.props",
       "PackagePath": "buildTransitive\\Nunes-Sport.API.props"
     }
   ],

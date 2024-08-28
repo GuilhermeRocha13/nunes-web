@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 export class ProdutosComponent implements OnInit {
 
   public produtos: any;
+  public formInvalido: any;
 
   constructor(private http: HttpClient, private modalService: NgbModal) { }
 
@@ -32,7 +33,7 @@ export class ProdutosComponent implements OnInit {
   }
 
   public editProduct(produto: any): void {
-    // Lógica para editar o produto (pode abrir outro modal com os detalhes do produto)
+   
   }
 
   public deleteProduct(id: number): void {
@@ -40,7 +41,7 @@ export class ProdutosComponent implements OnInit {
       this.http.delete(`http://localhost:5196/api/Produtos/${id}`).subscribe(
         () => {
           console.log('Produto deletado com sucesso!');
-          this.getProdutos();  // Atualiza a lista de produtos
+          this.getProdutos();
         },
         error => console.error('Erro ao deletar o produto:', error)
       );
@@ -52,25 +53,28 @@ export class ProdutosComponent implements OnInit {
   }
 
   public createProduct(form: any): void {
-  if (form.valid) {
-    const novoProduto = {
-      nome: form.value.nome,
-      descricao: form.value.descricao,
-      preco: form.value.preco,
-      codcategoria: form.value.codcategoria,
-      codfabricante: form.value.codfabricante,
-      imagemURL: form.value.imagemURL  // Adiciona o campo imagemURL aqui
-    };
+    if (form.valid) {
+      const novoProduto = {
+        nome: form.value.nome,
+        descricao: form.value.descricao,
+        preco: form.value.preco,
+        codcategoria: form.value.codcategoria,
+        codfabricante: form.value.codfabricante,
+        imagemURL: form.value.imagemURL
+      };
 
-    this.http.post('http://localhost:5196/api/Produtos', novoProduto)
-      .subscribe(response => {
-        console.log('Produto criado com sucesso!', response);
-        this.modalService.dismissAll();  // Fecha o modal
-        form.reset();  // Reseta o formulário
-        this.getProdutos();  // Atualiza a lista de produtos
-      }, error => {
-        console.error('Erro ao criar o produto:', error);
-      });
+      this.http.post('http://localhost:5196/api/Produtos', novoProduto)
+        .subscribe(response => {
+          console.log('Produto criado com sucesso!', response);
+          this.modalService.dismissAll();
+          form.reset();
+          this.getProdutos();
+          this.formInvalido = false;
+        }, error => {
+          console.error('Erro ao criar o produto:', error);
+        });
+    } else {
+      this.formInvalido = true;
     }
   }
 }

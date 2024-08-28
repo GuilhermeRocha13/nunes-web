@@ -7,11 +7,10 @@ using Nunes_Sport.API.Models;
 
 namespace Nunes_Sport.API.Data
 {
-public class AppDbContext : DbContext
-{
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-    public DbSet<Produto> Produtos { get; set; }
-    public DbSet<Fabricante> Fabricantes { get; set; }
-}
+        public DbSet<Produto> Produtos { get; set; }
+    }
 }

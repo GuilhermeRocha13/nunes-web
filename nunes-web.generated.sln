@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{99FEFC51-8FB3-4ABF-B0D0-FB004F94FB61}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{AB120898-8884-4DCD-8797-110529D93703}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E3469088-A065-4EDF-85C1-4345BA63A486}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AA122F82-2FD1-45FA-8582-39D33B8D0DC1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nunes-Sport.API", "Back\src\Nunes-Sport.API\Nunes-Sport.API.csproj", "{3CF289CC-636B-430E-AF87-458518173BEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nunes-Sport.API", "Back\src\Nunes-Sport.API\Nunes-Sport.API.csproj", "{3C4D3AEE-E7F9-4E49-8954-EA08123D4D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +15,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3CF289CC-636B-430E-AF87-458518173BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CF289CC-636B-430E-AF87-458518173BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CF289CC-636B-430E-AF87-458518173BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CF289CC-636B-430E-AF87-458518173BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4D3AEE-E7F9-4E49-8954-EA08123D4D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4D3AEE-E7F9-4E49-8954-EA08123D4D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4D3AEE-E7F9-4E49-8954-EA08123D4D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4D3AEE-E7F9-4E49-8954-EA08123D4D71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E3469088-A065-4EDF-85C1-4345BA63A486} = {99FEFC51-8FB3-4ABF-B0D0-FB004F94FB61}
-		{3CF289CC-636B-430E-AF87-458518173BEC} = {E3469088-A065-4EDF-85C1-4345BA63A486}
+		{AA122F82-2FD1-45FA-8582-39D33B8D0DC1} = {AB120898-8884-4DCD-8797-110529D93703}
+		{3C4D3AEE-E7F9-4E49-8954-EA08123D4D71} = {AA122F82-2FD1-45FA-8582-39D33B8D0DC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {591353EB-B487-49A6-8084-B7EA0117F8A9}
