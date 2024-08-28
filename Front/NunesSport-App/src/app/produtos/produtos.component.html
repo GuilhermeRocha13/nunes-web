@@ -1,32 +1,123 @@
-<form action="" class="form-inline">
-    <div class="form-group mb-2">
-        <input type="text" class="form-control mr-2" placeholder="buscar">
-    <button class="btn btn-outline-success"></button>
-    </div>
-</form>
-<table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>Código</th>
-            <th>Produto</th>
-            <th>Descricao</th>
-            <th>Preço</th>
-            <th>Código Categoria</th>
-            <th>Código Fabricante</th>
-            <th>#</th>
-            <th>#</th>
-        </tr>
-    </thead>
-    <tbody *ngFor="let produto of produtos">
-        <tr>
-            <td>{{produto.id}}</td>
-            <td>{{produto.nome}}</td>
-            <td>{{produto.descricao}}</td>
-            <td>{{produto.preco}}</td>
-            <td>{{produto.codcategoria}}</td>
-            <td>{{produto.codfrabricante}}</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
+<table class="table table-hover table-bordered text-center">
+  <thead class="thead-dark">
+      <tr>
+          <th></th>
+          <th>Código</th>
+          <th>Produto</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Categoria</th>
+          <th>Fabricante</th>
+          <th>Ações</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let produto of produtos">
+          <td>
+              <img src="/assets/{{produto.imagemURL}}" alt="" width="100" height="100" style="object-fit: cover; border-radius: 10px;">
+          </td>
+          <td>{{produto.id}}</td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayNome">
+                  <input type="text" [(ngModel)]="produto.nome" class="form-control" />
+              </ng-container>
+              <ng-template #displayNome>{{produto.nome}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayDescricao">
+                  <input type="text" [(ngModel)]="produto.descricao" class="form-control" />
+              </ng-container>
+              <ng-template #displayDescricao>{{produto.descricao}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayPreco">
+                  <input type="number" [(ngModel)]="produto.preco" class="form-control" />
+              </ng-container>
+              <ng-template #displayPreco>{{produto.preco | currency:'BRL':'symbol':'1.2-2'}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displaycategoria">
+                  <input type="text" [(ngModel)]="produto.categoria" class="form-control" />
+              </ng-container>
+              <ng-template #displaycategoria>{{produto.categoria}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayfabricante">
+                  <input type="text" [(ngModel)]="produto.fabricante" class="form-control" />
+              </ng-container>
+              <ng-template #displayfabricante>{{produto.fabricante}}</ng-template>
+          </td>
+          <td>
+              <ng-container *ngIf="selectedProduct?.id === produto.id; else displayAcoes">
+                  <button class="btn btn-success btn-sm" (click)="updateProduct(produto)">Salvar</button>
+                  <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancelar</button>
+              </ng-container>
+              <ng-template #displayAcoes>
+                  <button class="btn btn-warning btn-sm" (click)="editProduct(produto)">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteProduct(produto.id)">Deletar<i class="fas fa-trash"></i></button>
+              </ng-template>
+          </td>
+      </tr>
+  </tbody>
 </table>
+
+
+<!-- Botão para abrir o modal -->
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
+  Criar Produto
+</button>
+
+<!-- Modal de criação de produto -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createModalLabel">Criar Novo Produto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div *ngIf="formInvalido" class="alert alert-danger" role="alert">
+        Por favor, preencha todos os campos obrigatórios corretamente.
+      </div>
+      <div class="modal-body">
+        <form #createForm="ngForm" (ngSubmit)="createProduct(createForm)">
+          <!-- Campos do formulário -->
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" ngModel required>
+          </div>
+          <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição</label>
+            <input type="text" class="form-control" id="descricao" name="descricao" ngModel required>
+          </div>
+          <div class="mb-3">
+            <label for="preco" class="form-label">Preço</label>
+            <input type="number" class="form-control" id="preco" name="preco" ngModel required>
+          </div>
+          <div class="mb-3">
+            <label for="categoria" class="form-label">Categoria</label>
+            <input type="text" class="form-control" id="categoria" name="categoria" ngModel>
+          </div>
+          <div class="mb-3">
+            <label for="fabricante" class="form-label">Fabricante</label>
+            <input type="text" class="form-control" id="fabricante" name="fabricante" ngModel>
+          </div>
+          <div class="mb-3">
+            <label for="imagemURL" class="form-label">Catálogo de imagens</label>
+            <select class="form-select" id="imagemURL" name="imagemURL" ngModel required>
+              <option value="">Selecionar uma imagem...</option>
+              <option value="luva.jpg">Luva</option>
+              <option value="bandagem.jpg">Bandagem</option>
+              <option value="caneleira.jpg">Caneleira</option>
+              <option value="protetor.jpg">Protetor bucal</option>
+              <option value="chuteira.jpg">Chuteira</option>
+              <option value="bola.jpg">Bola</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success">Criar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

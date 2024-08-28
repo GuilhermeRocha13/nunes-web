@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "hremK4DIDj8BDWEGeozsTgdRxqxeh/uXCDgkFDakAEM=",
+  "Hash": "8fiK9sXnhbtMUiNIgMZj+60vpXS9YUl6ILYbN+8ZFOE=",
   "Source": "Nunes-Sport.API",
   "BasePath": "_content/Nunes-Sport.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Nunes-Sport.API/wwwroot",
+      "Source": "Nunes-Sport.API",
+      "ContentRoot": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/",
+      "BasePath": "_content/Nunes-Sport.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/images/bandagem.jpg",
+      "SourceId": "Nunes-Sport.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/",
+      "BasePath": "_content/Nunes-Sport.API",
+      "RelativePath": "images/bandagem.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/bandagem.jpg"
+    },
+    {
+      "Identity": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/images/luva.jpg",
+      "SourceId": "Nunes-Sport.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/guilherme/Documents/GitHub/nunes-web/Back/src/Nunes-Sport.API/wwwroot/",
+      "BasePath": "_content/Nunes-Sport.API",
+      "RelativePath": "images/luva.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/luva.jpg"
+    }
+  ]
 }
