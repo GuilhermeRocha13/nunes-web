@@ -1,6 +1,6 @@
 # Nunes Sport
 
-**Nunes Sport** é um sistema CRUD básico para uma loja fictícia, projetado para gerenciar produtos de forma eficiente. Este projeto utiliza uma arquitetura separada para o front-end e back-end, com um banco de dados SQLite para armazenamento.
+**Nunes Sport** é um sistema CRUD básico projetado para gerenciar produtos de forma eficiente. Este projeto utiliza uma arquitetura separada para o front-end e back-end, com um banco de dados SQLite para armazenamento.
 
 ## Tecnologias
 
@@ -44,3 +44,19 @@
 1. Navegue até a pasta `backend`:
    ```bash
    cd backend
+   dotnet restore
+   dotnet ef database update
+   dotnet run
+
+### Configuração do Front-end
+Navegue até a pasta `frontend`:
+   ```bash
+   cd frontend
+   npm install
+   ng serve
+
+
+
+
+
+
