@@ -41,12 +41,12 @@ export class ProdutosComponent implements OnInit {
       .put(`http://localhost:5196/api/Produtos/${produto.id}`, produto)
       .subscribe(
         (response) => {
-          console.log('Produto atualizado com sucesso!', response);
+          console.log(response);
           this.getProdutos();
           this.selectedProduct = null;
         },
         (error) => {
-          console.error('Erro ao atualizar o produto:', error);
+          console.error(error);
         }
       );
   }
@@ -55,10 +55,10 @@ export class ProdutosComponent implements OnInit {
     if (confirm('Tem certeza que deseja excluir este produto?')) {
       this.http.delete(`http://localhost:5196/api/Produtos/${id}`).subscribe(
         () => {
-          console.log('Produto deletado com sucesso!');
+          console.log('Produto deletado');
           this.getProdutos();
         },
-        (error) => console.error('Erro ao deletar o produto:', error)
+        (error) => console.error(error)
       );
     }
   }
@@ -82,14 +82,14 @@ export class ProdutosComponent implements OnInit {
         .post('http://localhost:5196/api/Produtos', novoProduto)
         .subscribe(
           (response) => {
-            console.log('Produto criado com sucesso!', response);
+            console.log(response);
             this.modalService.dismissAll();
             form.reset();
             this.getProdutos();
             this.formInvalido = false;
           },
           (error) => {
-            console.error('Erro ao criar o produto:', error);
+            console.error(error);
           }
         );
     } else {
