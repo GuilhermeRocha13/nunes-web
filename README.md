@@ -12,7 +12,6 @@
 
 - **CRUD de Produtos**: Adicionar, editar, visualizar e deletar produtos.
 - **Interface de Usuário**: Interface web responsiva para gerenciamento de produtos.
-- **Filtragem e Pesquisa**: Pesquisa de produtos por nome e descrição.
 
 ## Estrutura do Projeto
 
@@ -23,7 +22,7 @@
 
 ### Front-end
 
-- **Localização**: `Front`
+- **Localização**: `Front/`
 - **Descrição**: Desenvolvido com Angular, consome a API fornecida pelo back-end para manipulação de dados.
 
 ### Banco de Dados
@@ -42,7 +41,7 @@
 
 1. Navegue até a pasta `backend`:
    ```bash
-   cd Back/src/Nunes-Sport.API
+   cd Back/src/Nunes-Sport.API/
    dotnet run
 
 ### Configuração do Front-end
@@ -50,6 +49,7 @@ Navegue até a pasta `frontend`:
    ```bash
    cd Front/NunesSport-App/
    npm install
+   npm install -g @angular/cli
    ng serve
 
 
