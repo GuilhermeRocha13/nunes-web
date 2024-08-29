@@ -73,8 +73,8 @@ export class ProdutosComponent implements OnInit {
         nome: form.value.nome,
         descricao: form.value.descricao,
         preco: form.value.preco,
-        codcategoria: form.value.codcategoria,
-        codfabricante: form.value.codfabricante,
+        categoria: form.value.codcategoria,
+        fabricante: form.value.codfabricante,
         imagemURL: form.value.imagemURL,
       };
 
