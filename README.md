@@ -49,6 +49,7 @@ Navegue até a pasta `frontend`:
    ```bash
    cd Front/NunesSport-App/
    npm install
+   npm install -g @angular/cli
    ng serve
 
 
