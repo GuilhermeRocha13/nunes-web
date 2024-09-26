@@ -24,7 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^17.0.0",
     "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.3.3",
-    "express": "^4.18.2",
+    "express": "^4.21.0",
     "nunes-sport-app": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
